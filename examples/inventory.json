@@ -1,0 +1,23 @@
+{
+  "datacenter": "dc2-verify",
+  "hosts": [
+    "10.0.0.1:8500",
+    "10.0.0.2:8500",
+    "10.0.0.3:8500"
+  ],
+  "nodes": [
+    {"name": "verify-node-01", "address": "192.0.2.11"},
+    {"name": "verify-node-02", "address": "192.0.2.12"}
+  ],
+  "services": [
+    {"name": "verify-web", "node": "verify-node-01"},
+    {"name": "verify-web", "node": "verify-node-02"},
+    {"name": "verify-cache", "node": "verify-node-01"}
+  ],
+  "kv": [
+    "verify/config/db",
+    "verify/config/cache",
+    "verify/jobs/cleanup",
+    "verify/jobs/report"
+  ]
+}

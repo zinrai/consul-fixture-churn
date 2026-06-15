@@ -1,0 +1,6 @@
+{
+  "inventory": "inventory.json",
+  "seed": 42,
+  "interval": 300,
+  "count": 0
+}
