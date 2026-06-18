@@ -1,6 +1,6 @@
 # consul-fixture-churn
 
-> **WRITE TOOL — non-production clusters only.** This changes service instances,
+> **WRITE TOOL: non-production clusters only.** This changes service instances,
 > KV keys, and catalog nodes on a Consul cluster. Point it at a staging or lab
 > cluster, never at production. The write destination is the reviewed `hosts`
 > list in `inventory.json`, not a command-line argument, so a mistyped host
@@ -29,13 +29,13 @@ to the inventory file (resolved relative to `churn.json`) plus run parameters.
 }
 ```
 
-- **inventory** — path to the `inventory.json` to perturb. Its format is defined
+- **inventory**: path to the `inventory.json` to perturb. Its format is defined
   by [consul-fixture-seed](https://github.com/zinrai/consul-fixture-seed); see
   there.
-- **seed** (required) — the RNG seed. The same seed against the same starting
+- **seed** (required): the RNG seed. The same seed against the same starting
   state reproduces the same run.
-- **interval** — seconds between operations (default 300).
-- **count** — stop after N operations (default 0 = run until interrupted).
+- **interval**: seconds between operations (default 300).
+- **count**: stop after N operations (default 0 = run until interrupted).
 
 `churn.json` is the only source of these parameters; there are no command-line
 overrides.
